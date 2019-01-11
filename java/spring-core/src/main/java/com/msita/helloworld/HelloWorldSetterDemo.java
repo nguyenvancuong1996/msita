@@ -1,6 +1,6 @@
 package com.msita.helloworld;
 
-public class HelloWorld {
+public class HelloWorldSetterDemo {
     private String message;
 
     public void printMessage() {

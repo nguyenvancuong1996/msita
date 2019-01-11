@@ -2,7 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="helloWorld" class="com.msita.helloworld.HelloWorld">
+    <bean id="helloWorldSetterDemo" class="com.msita.helloworld.HelloWorldSetterDemo">
         <property name="message" value="Hello world"/>
+    </bean>
+    <bean id="helloWorldConstructorDemo" class="com.msita.helloworld.HelloWorldConstructorDemo">
+        <constructor-arg value="Hello world 2"/>
     </bean>
 </beans>

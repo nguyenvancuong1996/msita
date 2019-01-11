@@ -6,7 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainApp {
     public static void main(String args[]) {
         ApplicationContext context = new ClassPathXmlApplicationContext("helloworld_bean.xml");
-        HelloWorld helloWorldObject = (HelloWorld)context.getBean("helloWorld");
-        helloWorldObject.printMessage();
+        HelloWorldSetterDemo helloWorldSetterDemoObject = (HelloWorldSetterDemo)context.getBean("helloWorldSetterDemo");
+        helloWorldSetterDemoObject.printMessage();
+
+        HelloWorldConstructorDemo helloWorldConstructorDemo =(HelloWorldConstructorDemo)context.getBean("helloWorldConstructorDemo");
+        helloWorldConstructorDemo.printMessage();
     }
 }
