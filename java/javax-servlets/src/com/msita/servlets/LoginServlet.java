@@ -1,4 +1,4 @@
-package java.com.msita.servlets;
+package com.msita.servlets;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

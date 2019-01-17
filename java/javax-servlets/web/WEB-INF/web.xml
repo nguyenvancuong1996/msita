@@ -6,7 +6,7 @@
            version="4.0">
     <servlet>
         <servlet-name>hello-servlet</servlet-name>
-        <servlet-class>java.com.msita.servlets.HelloServlet</servlet-class>
+        <servlet-class>com.msita.servlets.HelloServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
