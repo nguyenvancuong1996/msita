@@ -11,7 +11,12 @@ import java.io.IOException;
 public class WelcomeServlet extends HelloServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/jsp/welcome.jsp");
-        requestDispatcher.forward(req, resp);
+        if (req.getSession().getAttribute("username") != null) {
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/jsp/welcome.jsp");
+            requestDispatcher.forward(req, resp);
+        }
+        else {
+            resp.sendRedirect("/login");
+        }
     }
 }
