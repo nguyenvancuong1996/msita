@@ -8,4 +8,8 @@
     <bean id="helloWorldConstructorDemo" class="com.msita.helloworld.HelloWorldConstructorDemo">
         <constructor-arg value="Hello world 2"/>
     </bean>
+
+    <bean id="helloReferenceDemo" class="com.msita.helloworld.HelloReferenceDemo">
+        <property name="helloWorldSetterDemo" ref="helloWorldSetterDemo"/>
+    </bean>
 </beans>

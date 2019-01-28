@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="listCollectionDemo" class="com.msita.collection.ListCollectionDemo">
+        <property name="addresses">
+            <list>
+                <value>Viet Nam</value>
+                <value>USA</value>
+                <value>Viet Nam</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="setCollectionDemo" class="com.msita.collection.SetCollectionDemo">
+        <property name="addresses">
+            <set>
+                <value>Viet Nam</value>
+                <value>USA</value>
+                <value>Viet Nam</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="mapCollectionDemo" class="com.msita.collection.MapCollectionDemo">
+        <property name="addresses">
+            <map>
+                <entry key="1" value="INDIA"/>
+                <entry key="2" value="USA"/>
+                <entry key="3" value="USA"/>
+                <entry key="1" value="Viet Nam"/>
+            </map>
+        </property>
+    </bean>
+</beans>

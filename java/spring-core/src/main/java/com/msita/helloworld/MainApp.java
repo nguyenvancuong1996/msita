@@ -11,5 +11,8 @@ public class MainApp {
 
         HelloWorldConstructorDemo helloWorldConstructorDemo =(HelloWorldConstructorDemo)context.getBean("helloWorldConstructorDemo");
         helloWorldConstructorDemo.printMessage();
+
+        HelloReferenceDemo helloReferenceDemo = (HelloReferenceDemo) context.getBean("helloReferenceDemo");
+        helloReferenceDemo.getHelloWorldSetterDemo().printMessage();
     }
 }
