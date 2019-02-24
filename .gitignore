@@ -1,0 +1,7 @@
+java/spring-mvc/target
+java/spring-core/target
+java/spring-core/.idea
+java/spring-mvc/.idea
+java/javax-servlets/out
+java/javax-servlets/.idea
+.DS_Store
