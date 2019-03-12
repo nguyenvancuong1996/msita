@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>Hibernate demo page</title>
+    <title>Add user</title>
 </head>
 <body>
     <table>

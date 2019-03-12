@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Delete user</title>
+    <title>Get user</title>
 </head>
 <body>
-    <form action="/deleteUser" method="post">
+    <form action="/getUser" method="post">
         Id: <input type="text" name="userId">
         <input type="submit" value="Delete user">
     </form>

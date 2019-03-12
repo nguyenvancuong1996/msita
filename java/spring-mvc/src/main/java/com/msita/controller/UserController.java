@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
-public class HibernateDemoController {
+public class UserController {
 
     @Resource
     private UserService userService;
@@ -54,6 +54,18 @@ public class HibernateDemoController {
     public String getAllUsers(final Model model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", users);
-        return "get_all_users";
+        return "show_all_users";
+    }
+
+    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
+    public String getUser() {
+        return "get_user";
+    }
+
+    @RequestMapping(value = "/getUser", method = RequestMethod.POST)
+    public String getUser(final Model model, @RequestParam("userId") final String userId) {
+        final User user = userService.getUserById(userId);
+        model.addAttribute("user", user);
+        return "show_user";
     }
 }

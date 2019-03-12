@@ -2,7 +2,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
 <head>
-    <title>Hibernate demo page</title>
+    <title>Show all users</title>
 </head>
 <body>
     <table border="1">

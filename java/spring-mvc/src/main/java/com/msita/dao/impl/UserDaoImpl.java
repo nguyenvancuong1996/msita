@@ -16,33 +16,28 @@ public class UserDaoImpl implements UserDao {
     private SessionFactory sessionFactory;
 
     public void addUser(final User user) {
-        final Session session = sessionFactory.openSession();
+        final Session session = sessionFactory.getCurrentSession();
         session.save(user);
-        session.close();
     }
 
     public void deleteUser(final String userId) {
-        final Session session = sessionFactory.openSession();
+        final Session session = sessionFactory.getCurrentSession();
         final User user = session.get(User.class, userId);
         if (user == null) {
             return;
         }
         session.delete(user);
         session.flush();
-        session.close();
     }
 
     public User getUserById(final String userId) {
-        final Session session = sessionFactory.openSession();
+        final Session session = sessionFactory.getCurrentSession();
         final User user = session.get(User.class, userId);
-        session.close();
         return user;
     }
 
     public List<User> getAllUsers() {
-        final Session session = sessionFactory.openSession();
-        List<User> users = session.createQuery("from User", User.class).getResultList();
-        session.close();
-        return users;
+        final Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("from User", User.class).getResultList();
     }
 }
