@@ -1,11 +1,10 @@
 package com.msita.controller;
 
-import com.msita.dao.CompanyDao;
 import com.msita.entity.CompanyEntity;
 import com.msita.entity.EmployeeEntity;
 import com.msita.form.EmployeeForm;
 import com.msita.service.CompanyService;
-import com.msita.service.impl.EmployeeService;
+import com.msita.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

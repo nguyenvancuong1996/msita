@@ -2,6 +2,7 @@ package com.msita.service.impl;
 
 import com.msita.dao.EmployeeDao;
 import com.msita.entity.EmployeeEntity;
+import com.msita.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
